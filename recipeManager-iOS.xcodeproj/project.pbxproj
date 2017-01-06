@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5121367854827ABB7B342FF9 /* Pods_recipeManager_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1FF6CE320C26A3B88553402 /* Pods_recipeManager_iOS.framework */; };
+		BE4A05E01E1FFA2600D66ECC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05DF1E1FFA2600D66ECC /* AccountViewController.swift */; };
+		BE4A05E21E1FFA3C00D66ECC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */; };
+		BE8DAD701E1F061B0017B77B /* RecipeManagerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DAD6F1E1F061B0017B77B /* RecipeManagerConnection.swift */; };
 		BEB6C2571E1C873900AEDC64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6C2561E1C873900AEDC64 /* AppDelegate.swift */; };
-		BEB6C2591E1C873900AEDC64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6C2581E1C873900AEDC64 /* ViewController.swift */; };
 		BEB6C25C1E1C873900AEDC64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB6C25A1E1C873900AEDC64 /* Main.storyboard */; };
 		BEB6C25F1E1C873900AEDC64 /* recipeManager_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEB6C25D1E1C873900AEDC64 /* recipeManager_iOS.xcdatamodeld */; };
 		BEB6C2611E1C873900AEDC64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB6C2601E1C873900AEDC64 /* Assets.xcassets */; };
@@ -16,9 +19,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EA8358C7C0DEC6632BBD29F /* Pods-recipeManager-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recipeManager-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-recipeManager-iOS/Pods-recipeManager-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		537536799B3BC98801BFC398 /* Pods-recipeManager-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recipeManager-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recipeManager-iOS/Pods-recipeManager-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B1FF6CE320C26A3B88553402 /* Pods_recipeManager_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_recipeManager_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4A05DF1E1FFA2600D66ECC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = "recipeManager-iOS/AccountViewController.swift"; sourceTree = SOURCE_ROOT; };
+		BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "recipeManager-iOS/LoginViewController.swift"; sourceTree = SOURCE_ROOT; };
+		BE8DAD6F1E1F061B0017B77B /* RecipeManagerConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeManagerConnection.swift; sourceTree = "<group>"; };
 		BEB6C2531E1C873900AEDC64 /* recipeManager-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "recipeManager-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB6C2561E1C873900AEDC64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEB6C2581E1C873900AEDC64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEB6C25B1E1C873900AEDC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEB6C25E1E1C873900AEDC64 /* recipeManager_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recipeManager_iOS.xcdatamodel; sourceTree = "<group>"; };
 		BEB6C2601E1C873900AEDC64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,17 +39,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5121367854827ABB7B342FF9 /* Pods_recipeManager_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51BEA533F3F7DBC7E4A466BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				537536799B3BC98801BFC398 /* Pods-recipeManager-iOS.debug.xcconfig */,
+				0EA8358C7C0DEC6632BBD29F /* Pods-recipeManager-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		77129415559E0E26BBB67BE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1FF6CE320C26A3B88553402 /* Pods_recipeManager_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE8DAD6E1E1F05DA0017B77B /* RecipeManager */ = {
+			isa = PBXGroup;
+			children = (
+				BE8DAD6F1E1F061B0017B77B /* RecipeManagerConnection.swift */,
+			);
+			name = RecipeManager;
+			sourceTree = "<group>";
+		};
+		BE8DAD731E1FDA4B0017B77B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE8DAD761E1FDA730017B77B /* Account */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BE8DAD761E1FDA730017B77B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BE4A05DF1E1FFA2600D66ECC /* AccountViewController.swift */,
+				BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */,
+			);
+			name = Account;
+			path = "../../../Keep it in the Family/Keep it in the Family iOS/Keep it in the Family iOS";
+			sourceTree = "<group>";
+		};
 		BEB6C24A1E1C873900AEDC64 = {
 			isa = PBXGroup;
 			children = (
 				BEB6C2551E1C873900AEDC64 /* recipeManager-iOS */,
 				BEB6C2541E1C873900AEDC64 /* Products */,
+				51BEA533F3F7DBC7E4A466BF /* Pods */,
+				77129415559E0E26BBB67BE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +110,9 @@
 		BEB6C2551E1C873900AEDC64 /* recipeManager-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				BE8DAD6E1E1F05DA0017B77B /* RecipeManager */,
+				BE8DAD731E1FDA4B0017B77B /* Controllers */,
 				BEB6C2561E1C873900AEDC64 /* AppDelegate.swift */,
-				BEB6C2581E1C873900AEDC64 /* ViewController.swift */,
 				BEB6C25A1E1C873900AEDC64 /* Main.storyboard */,
 				BEB6C2601E1C873900AEDC64 /* Assets.xcassets */,
 				BEB6C2621E1C873900AEDC64 /* LaunchScreen.storyboard */,
@@ -74,9 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEB6C2681E1C873900AEDC64 /* Build configuration list for PBXNativeTarget "recipeManager-iOS" */;
 			buildPhases = (
+				75265955D365EB635FF28DFD /* 📦 Check Pods Manifest.lock */,
 				BEB6C24F1E1C873900AEDC64 /* Sources */,
 				BEB6C2501E1C873900AEDC64 /* Frameworks */,
 				BEB6C2511E1C873900AEDC64 /* Resources */,
+				E5393D55DE2B4996F0763038 /* 📦 Embed Pods Frameworks */,
+				C2D0905CC0863FB1DCFAAD0B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +158,7 @@
 					BEB6C2521E1C873900AEDC64 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9TGE3BXSJD;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -135,14 +194,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75265955D365EB635FF28DFD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D0905CC0863FB1DCFAAD0B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-recipeManager-iOS/Pods-recipeManager-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5393D55DE2B4996F0763038 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-recipeManager-iOS/Pods-recipeManager-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEB6C24F1E1C873900AEDC64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEB6C2591E1C873900AEDC64 /* ViewController.swift in Sources */,
 				BEB6C2571E1C873900AEDC64 /* AppDelegate.swift in Sources */,
 				BEB6C25F1E1C873900AEDC64 /* recipeManager_iOS.xcdatamodeld in Sources */,
+				BE4A05E01E1FFA2600D66ECC /* AccountViewController.swift in Sources */,
+				BE4A05E21E1FFA3C00D66ECC /* LoginViewController.swift in Sources */,
+				BE8DAD701E1F061B0017B77B /* RecipeManagerConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +372,7 @@
 		};
 		BEB6C2691E1C873900AEDC64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 537536799B3BC98801BFC398 /* Pods-recipeManager-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TGE3BXSJD;
@@ -276,6 +386,7 @@
 		};
 		BEB6C26A1E1C873900AEDC64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA8358C7C0DEC6632BBD29F /* Pods-recipeManager-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9TGE3BXSJD;
@@ -306,6 +417,7 @@
 				BEB6C26A1E1C873900AEDC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
