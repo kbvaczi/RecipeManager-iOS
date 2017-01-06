@@ -58,6 +58,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95S-YY-4n1">
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="jsw-w8-oyn" eventType="touchUpInside" id="V8g-RV-8pa"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Confirmation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h7-Mu-IYq">
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
@@ -68,20 +74,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95S-YY-4n1">
-                                <state key="normal" title="Sign Up"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4n-Pp-aKW">
+                                <state key="normal" title="Already have an account?"/>
                                 <connections>
-                                    <action selector="signUp:" destination="jsw-w8-oyn" eventType="touchUpInside" id="V8g-RV-8pa"/>
+                                    <action selector="switchModes:" destination="jsw-w8-oyn" eventType="touchUpInside" id="Yfk-AP-vcx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MZV-PE-q5n" firstAttribute="top" secondItem="hIx-b0-cRL" secondAttribute="bottom" constant="141" id="4PX-P8-jgt"/>
+                            <constraint firstItem="MZV-PE-q5n" firstAttribute="top" secondItem="hIx-b0-cRL" secondAttribute="bottom" constant="120" id="4PX-P8-jgt"/>
                             <constraint firstItem="hIx-b0-cRL" firstAttribute="top" secondItem="ao9-cx-eWJ" secondAttribute="bottom" constant="8" id="4XN-sR-2lF"/>
                             <constraint firstItem="TlV-3r-PKw" firstAttribute="top" secondItem="XDy-nq-g43" secondAttribute="bottom" constant="48" id="4l9-Oi-wzc"/>
                             <constraint firstItem="XDy-nq-g43" firstAttribute="top" secondItem="zL9-y3-1te" secondAttribute="top" id="4pl-YJ-NjY"/>
                             <constraint firstItem="mMM-c0-3Z4" firstAttribute="top" secondItem="3h7-Mu-IYq" secondAttribute="bottom" constant="8" id="9ne-oh-yo8"/>
+                            <constraint firstItem="j4n-Pp-aKW" firstAttribute="top" secondItem="95S-YY-4n1" secondAttribute="bottom" constant="46" id="DtJ-Mz-auQ"/>
                             <constraint firstItem="mMM-c0-3Z4" firstAttribute="trailing" secondItem="3h7-Mu-IYq" secondAttribute="trailing" id="EzL-cw-Ac1"/>
                             <constraint firstItem="XDy-nq-g43" firstAttribute="centerX" secondItem="zL9-y3-1te" secondAttribute="centerX" id="Fc4-9E-rHR"/>
                             <constraint firstItem="TlV-3r-PKw" firstAttribute="leading" secondItem="zL9-y3-1te" secondAttribute="leadingMargin" constant="-4" id="GNp-Ze-Uym"/>
@@ -97,7 +104,8 @@
                             <constraint firstItem="3h7-Mu-IYq" firstAttribute="top" secondItem="hIx-b0-cRL" secondAttribute="bottom" constant="8" id="dCa-Tx-rDK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RVc-eF-aSb" secondAttribute="trailing" id="fW0-42-AqA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RVc-eF-aSb" secondAttribute="leading" id="hes-Ew-flP"/>
-                            <constraint firstItem="95S-YY-4n1" firstAttribute="top" secondItem="hIx-b0-cRL" secondAttribute="bottom" constant="141" id="kur-u3-EXc"/>
+                            <constraint firstItem="j4n-Pp-aKW" firstAttribute="centerX" secondItem="zL9-y3-1te" secondAttribute="centerX" id="kUG-T0-uUh"/>
+                            <constraint firstItem="95S-YY-4n1" firstAttribute="top" secondItem="hIx-b0-cRL" secondAttribute="bottom" constant="120" id="kur-u3-EXc"/>
                             <constraint firstItem="XDy-nq-g43" firstAttribute="leading" secondItem="zL9-y3-1te" secondAttribute="leading" id="mOw-0N-uCF"/>
                             <constraint firstAttribute="trailing" secondItem="XDy-nq-g43" secondAttribute="trailing" id="mjQ-ul-CT6"/>
                             <constraint firstItem="ao9-cx-eWJ" firstAttribute="top" secondItem="Q7d-77-GuB" secondAttribute="bottom" constant="8" id="mx2-4O-WNQ"/>
@@ -116,6 +124,7 @@
                         <outlet property="passwordConfirmationTextField" destination="mMM-c0-3Z4" id="kIa-9t-gLm"/>
                         <outlet property="passwordTextField" destination="hIx-b0-cRL" id="mUr-Dh-d0D"/>
                         <outlet property="signUpButton" destination="95S-YY-4n1" id="g5Q-vx-M8N"/>
+                        <outlet property="switchModeButton" destination="j4n-Pp-aKW" id="gnX-5L-Rgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsi-zM-HPX" userLabel="First Responder" sceneMemberID="firstResponder"/>

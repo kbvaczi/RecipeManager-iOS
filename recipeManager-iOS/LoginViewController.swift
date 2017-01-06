@@ -12,6 +12,7 @@ import Alamofire
 class LoginViewController: UIViewController {
     
     let connection = RecipeManagerConnection()
+    var currentMode: ViewMode?
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,6 +21,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordConfirmationLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var switchModeButton: UIButton!
+    
+    @IBAction func switchModes(_ sender: UIButton) {
+        if currentMode == ViewMode.login {
+            switchToSignUpView()
+        } else {
+            switchToLoginView()
+        }
+    }
     
     @IBAction func signUp(_ sender: UIButton) {
         guard   let userEmail = emailTextField.text,
@@ -29,10 +39,16 @@ class LoginViewController: UIViewController {
         }
         connection.emailRegistrationRequest(email: userEmail, password: userPassword, passwordConfirmation: userPasswordConfirmation) { (signupSuccess: Bool) -> Void in
             if signupSuccess {
-                // TODO: Prompt user to confirm email account prior to logging in
                 self.switchToLoginView()
+                let alert = UIAlertController(title: "Welcome!", message: "Please confirm your account using instructions emailed to the address provided.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
             } else {
                 print("sign up failure")
+                let alert = UIAlertController(title: "Oops!", message: "Something went wrong.  Please try again", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -48,6 +64,9 @@ class LoginViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             } else {
                 print("login failure")
+                let alert = UIAlertController(title: "Oops!", message: "Something went wrong.  Please try again", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -62,6 +81,8 @@ class LoginViewController: UIViewController {
         passwordConfirmationTextField.isHidden = true
         loginButton.isHidden = false
         signUpButton.isHidden = true
+        currentMode = ViewMode.login
+        switchModeButton.setTitle("Don't have an account?", for: .normal)
     }
     
     func switchToSignUpView() {
@@ -70,8 +91,14 @@ class LoginViewController: UIViewController {
         passwordConfirmationTextField.isHidden = false
         loginButton.isHidden = true
         signUpButton.isHidden = false
+        currentMode = ViewMode.signup
+        switchModeButton.setTitle("Already have an account?", for: .normal)
     }
 
-    
+    enum ViewMode {
+        case signup
+        case login
+    }
+
 }
 
