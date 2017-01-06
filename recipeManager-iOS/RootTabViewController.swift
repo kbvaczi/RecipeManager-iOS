@@ -12,7 +12,7 @@ import FontAwesome_swift
 class RootTabBarController: UITabBarController {
     
     private enum TabTitles: String, CustomStringConvertible {
-        case Contacts
+        case Recipes
         case Account
         
         var description: String {
@@ -21,13 +21,12 @@ class RootTabBarController: UITabBarController {
     }
     
     private var tabIcons = [
-        TabTitles.Contacts: FontAwesome.group,
+        TabTitles.Recipes: FontAwesome.cutlery,
         TabTitles.Account: FontAwesome.user,
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let tabBarItems = tabBar.items {
             for item in tabBarItems {
                 if let title = item.title,

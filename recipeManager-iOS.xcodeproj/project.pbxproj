@@ -78,9 +78,9 @@
 		BE8DAD731E1FDA4B0017B77B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BE8DAD761E1FDA730017B77B /* Account */,
 				BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */,
 				BE4A05E51E203BC700D66ECC /* RecipeManagerViewController.swift */,
+				BE8DAD761E1FDA730017B77B /* Account */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
