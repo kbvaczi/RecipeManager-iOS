@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class AccountViewController: RecipeManagerViewController {
     
     @IBOutlet weak var accountLabel: UILabel!
     
@@ -18,12 +18,11 @@ class AccountViewController: UIViewController {
                 self.accountLabel.text = ""
             }
         }
+        presentLoginView()
     }
     
-    let connection = RecipeManagerConnection()
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         accountLabel.text = connection.userEmail
     }
-
+    
 }

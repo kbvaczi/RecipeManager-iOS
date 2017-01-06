@@ -9,9 +9,12 @@
 import UIKit
 import Alamofire
 
-class LoginViewController: UIViewController {
+class LoginViewController: RecipeManagerViewController {
     
-    let connection = RecipeManagerConnection()
+    override var thisViewRequiresAuthentication: Bool {
+        return false
+    }
+    
     var currentMode: ViewMode?
     
     @IBOutlet weak var headerLabel: UILabel!
