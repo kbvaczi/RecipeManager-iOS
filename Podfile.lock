@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.2.0)
+  - Eureka (2.0.0-beta.1)
+  - FontAwesome.swift (1.0.0)
+  - Locksmith (3.0.0)
+  - MGSwipeTableCell (1.5.6)
+  - SwiftyJSON (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.2)
+  - Eureka (~> 2.0.0-beta.1)
+  - FontAwesome.swift (~> 1.0)
+  - Locksmith (~> 3.0)
+  - MGSwipeTableCell (~> 1.5)
+  - SwiftyJSON (= 3.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
+  FontAwesome.swift: 2d32a3d62195343c2004b7c9043294ed2948553a
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+  MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+
+PODFILE CHECKSUM: 49c6fc1469c83c45eb756db823fa783bb552ed49
+
+COCOAPODS: 1.0.0
