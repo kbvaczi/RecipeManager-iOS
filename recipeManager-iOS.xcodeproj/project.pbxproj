@@ -12,6 +12,9 @@
 		BE4A05E21E1FFA3C00D66ECC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */; };
 		BE4A05E41E20370C00D66ECC /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */; };
 		BE4A05E61E203BC700D66ECC /* RecipeManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E51E203BC700D66ECC /* RecipeManagerViewController.swift */; };
+		BE4A05E91E20436300D66ECC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E81E20436300D66ECC /* Recipe.swift */; };
+		BE4A05EB1E2043EE00D66ECC /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05EA1E2043EE00D66ECC /* Ingredient.swift */; };
+		BE4A05F11E212C8200D66ECC /* UnitsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05F01E212C8200D66ECC /* UnitsConfig.swift */; };
 		BE8DAD701E1F061B0017B77B /* RecipeManagerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DAD6F1E1F061B0017B77B /* RecipeManagerConnection.swift */; };
 		BEB6C2571E1C873900AEDC64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB6C2561E1C873900AEDC64 /* AppDelegate.swift */; };
 		BEB6C25C1E1C873900AEDC64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB6C25A1E1C873900AEDC64 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 		BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "recipeManager-iOS/LoginViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		BE4A05E51E203BC700D66ECC /* RecipeManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeManagerViewController.swift; sourceTree = "<group>"; };
+		BE4A05E81E20436300D66ECC /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = RecipeManager/Recipe.swift; sourceTree = "<group>"; };
+		BE4A05EA1E2043EE00D66ECC /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		BE4A05F01E212C8200D66ECC /* UnitsConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsConfig.swift; sourceTree = "<group>"; };
 		BE8DAD6F1E1F061B0017B77B /* RecipeManagerConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeManagerConnection.swift; sourceTree = "<group>"; };
 		BEB6C2531E1C873900AEDC64 /* recipeManager-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "recipeManager-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB6C2561E1C873900AEDC64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,12 +73,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE8DAD6E1E1F05DA0017B77B /* RecipeManager */ = {
+		BE4A05E71E20431700D66ECC /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		BE4A05EC1E20444A00D66ECC /* Connections */ = {
 			isa = PBXGroup;
 			children = (
 				BE8DAD6F1E1F061B0017B77B /* RecipeManagerConnection.swift */,
 			);
-			name = RecipeManager;
+			name = Connections;
+			sourceTree = "<group>";
+		};
+		BE4A05ED1E20446300D66ECC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE4A05E81E20436300D66ECC /* Recipe.swift */,
+				BE4A05EA1E2043EE00D66ECC /* Ingredient.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BE4A05EF1E212C6500D66ECC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BE4A05F01E212C8200D66ECC /* UnitsConfig.swift */,
+			);
+			name = Configuration;
 			sourceTree = "<group>";
 		};
 		BE8DAD731E1FDA4B0017B77B /* Controllers */ = {
@@ -80,6 +110,7 @@
 			children = (
 				BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */,
 				BE4A05E51E203BC700D66ECC /* RecipeManagerViewController.swift */,
+				BE4A05E71E20431700D66ECC /* Recipes */,
 				BE8DAD761E1FDA730017B77B /* Account */,
 			);
 			name = Controllers;
@@ -116,7 +147,9 @@
 		BEB6C2551E1C873900AEDC64 /* recipeManager-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BE8DAD6E1E1F05DA0017B77B /* RecipeManager */,
+				BE4A05EF1E212C6500D66ECC /* Configuration */,
+				BE4A05EC1E20444A00D66ECC /* Connections */,
+				BE4A05ED1E20446300D66ECC /* Models */,
 				BE8DAD731E1FDA4B0017B77B /* Controllers */,
 				BEB6C2561E1C873900AEDC64 /* AppDelegate.swift */,
 				BEB6C25A1E1C873900AEDC64 /* Main.storyboard */,
@@ -255,11 +288,14 @@
 			files = (
 				BE4A05E41E20370C00D66ECC /* RootTabViewController.swift in Sources */,
 				BEB6C2571E1C873900AEDC64 /* AppDelegate.swift in Sources */,
+				BE4A05EB1E2043EE00D66ECC /* Ingredient.swift in Sources */,
 				BEB6C25F1E1C873900AEDC64 /* recipeManager_iOS.xcdatamodeld in Sources */,
 				BE4A05E61E203BC700D66ECC /* RecipeManagerViewController.swift in Sources */,
+				BE4A05F11E212C8200D66ECC /* UnitsConfig.swift in Sources */,
 				BE4A05E01E1FFA2600D66ECC /* AccountViewController.swift in Sources */,
 				BE4A05E21E1FFA3C00D66ECC /* LoginViewController.swift in Sources */,
 				BE8DAD701E1F061B0017B77B /* RecipeManagerConnection.swift in Sources */,
+				BE4A05E91E20436300D66ECC /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

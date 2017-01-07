@@ -12,4 +12,5 @@ target 'recipeManager-iOS' do
   pod 'MGSwipeTableCell', '~> 1.5'
   pod 'FontAwesome.swift', '~> 1.0'
   pod 'Eureka', '~> 2.0.0-beta.1'
+  pod 'MKUnits', '~> 4.0'
 end

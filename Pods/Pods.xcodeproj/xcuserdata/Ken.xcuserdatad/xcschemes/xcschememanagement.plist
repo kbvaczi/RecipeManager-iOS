@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MKUnits.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-recipeManager-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +52,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0002BA71FBEDAFB35CE94A7E2766A513</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1FE2578FF0805299395CF2A0206BB671</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E1263BFF45F6446CF3DE29AE234C893</key>
+		<key>20D3B702315AC7AE801C8778E18167FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5393651D980216FE164BD1C602C3181C</key>
+		<key>4205F9C142A01990622E2947095A40AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E1263BFF45F6446CF3DE29AE234C893</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,11 +88,6 @@
 			<true/>
 		</dict>
 		<key>92943306EC8070DF9CD02ECD505D2CD5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9E7BBAE927BACA19E349FE9000AED93D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

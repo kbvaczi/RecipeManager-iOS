@@ -4,6 +4,7 @@ PODS:
   - FontAwesome.swift (1.0.0)
   - Locksmith (3.0.0)
   - MGSwipeTableCell (1.5.6)
+  - MKUnits (4.0.0)
   - SwiftyJSON (3.0.0)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - FontAwesome.swift (~> 1.0)
   - Locksmith (~> 3.0)
   - MGSwipeTableCell (~> 1.5)
+  - MKUnits (~> 4.0)
   - SwiftyJSON (= 3.0.0)
 
 SPEC CHECKSUMS:
@@ -20,8 +22,9 @@ SPEC CHECKSUMS:
   FontAwesome.swift: 2d32a3d62195343c2004b7c9043294ed2948553a
   Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
+  MKUnits: dc779f47b6335bf30b381a1ce57061dc4cfde0e1
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 49c6fc1469c83c45eb756db823fa783bb552ed49
+PODFILE CHECKSUM: c02cf4590a25a34ff7863f3df8eac462cc3abf83
 
 COCOAPODS: 1.0.0
