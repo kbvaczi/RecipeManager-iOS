@@ -9,11 +9,7 @@
 import UIKit
 import Alamofire
 
-class LoginViewController: RecipeManagerViewController {
-    
-    override var thisViewRequiresAuthentication: Bool {
-        return false
-    }
+class LoginViewController: UIViewController {
     
     var currentMode: ViewMode?
     
@@ -40,7 +36,7 @@ class LoginViewController: RecipeManagerViewController {
                 let userPasswordConfirmation = passwordConfirmationTextField.text else {
                 return
         }
-        connection.emailRegistrationRequest(email: userEmail, password: userPassword, passwordConfirmation: userPasswordConfirmation) { (signupSuccess: Bool) -> Void in
+        Connections.RMConnection.emailRegistrationRequest(email: userEmail, password: userPassword, passwordConfirmation: userPasswordConfirmation) { (signupSuccess: Bool) -> Void in
             if signupSuccess {
                 self.switchToLoginView()
                 let alert = UIAlertController(title: "Welcome!", message: "Please confirm your account using instructions emailed to the address provided.", preferredStyle: UIAlertControllerStyle.alert)
@@ -61,7 +57,7 @@ class LoginViewController: RecipeManagerViewController {
                 let userPassword = passwordTextField.text else {
                 return
         }
-        connection.loginRequest(email: userEmail, password: userPassword) { (loginSuccess: Bool) -> Void in
+        Connections.RMConnection.loginRequest(email: userEmail, password: userPassword) { (loginSuccess: Bool) -> Void in
             if loginSuccess {
                 print("login successful")
                 self.dismiss(animated: true, completion: nil)

@@ -140,5 +140,7 @@ extension MKUnits.Unit {
         }
         return CountingUnit.count
     }
+
+    static var defaultUnit: MKUnits.Unit { get { return CountingUnit.count } }
     
 }

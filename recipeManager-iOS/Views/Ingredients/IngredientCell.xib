@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UITableViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Ingredient Cell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="68" id="9yG-9U-SVB" customClass="IngredientCell" customModule="recipeManager_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9yG-9U-SVB" id="8Cn-b7-yuK">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdT-1p-nbs">
+                        <rect key="frame" x="18" y="8" width="316" height="52"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="HdT-1p-nbs" secondAttribute="trailing" id="8Mx-Bx-UHW"/>
+                    <constraint firstItem="HdT-1p-nbs" firstAttribute="top" secondItem="8Cn-b7-yuK" secondAttribute="topMargin" id="aDg-4Z-zP2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="HdT-1p-nbs" secondAttribute="bottom" id="b9P-XR-LsX"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="HdT-1p-nbs" secondAttribute="leading" constant="-10" id="mgX-2v-gcj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="HdT-1p-nbs" id="ERz-2E-9CG"/>
+            </connections>
+            <point key="canvasLocation" x="-194.5" y="-296"/>
+        </tableViewCell>
+    </objects>
+</document>

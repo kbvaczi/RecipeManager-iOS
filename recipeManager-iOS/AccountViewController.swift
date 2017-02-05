@@ -8,12 +8,12 @@
 
 import UIKit
 
-class AccountViewController: RecipeManagerViewController {
+class AccountViewController: UIViewController, UserAuthenticationRequired {
     
     @IBOutlet weak var accountLabel: UILabel!
     
     @IBAction func logout(_ sender: UIButton) {
-        connection.logoutRequest() { (logoutSuccess: Bool) -> Void in
+        Connections.RMConnection.logoutRequest() { (logoutSuccess: Bool) -> Void in
             if logoutSuccess {
                 self.accountLabel.text = ""
             }
@@ -22,7 +22,7 @@ class AccountViewController: RecipeManagerViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        accountLabel.text = connection.userEmail
+        accountLabel.text = Connections.RMConnection.userEmail
     }
     
 }
