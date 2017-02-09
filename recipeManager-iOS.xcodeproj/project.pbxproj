@@ -12,6 +12,7 @@
 		BE34D8E21E460C5800DB3714 /* DirectionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34D8E11E460C5800DB3714 /* DirectionFormViewController.swift */; };
 		BE34D8E41E4612A200DB3714 /* DirectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE34D8E31E4612A200DB3714 /* DirectionCell.xib */; };
 		BE34D8E61E475E1300DB3714 /* FormDeletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34D8E51E475E1300DB3714 /* FormDeletable.swift */; };
+		BE34D8E91E4AA23500DB3714 /* rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34D8E81E4AA23500DB3714 /* rational.swift */; };
 		BE4A05E01E1FFA2600D66ECC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05DF1E1FFA2600D66ECC /* AccountViewController.swift */; };
 		BE4A05E21E1FFA3C00D66ECC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */; };
 		BE4A05E41E20370C00D66ECC /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */; };
@@ -49,6 +50,7 @@
 		BE34D8E11E460C5800DB3714 /* DirectionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionFormViewController.swift; sourceTree = "<group>"; };
 		BE34D8E31E4612A200DB3714 /* DirectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionCell.xib; sourceTree = "<group>"; };
 		BE34D8E51E475E1300DB3714 /* FormDeletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDeletable.swift; sourceTree = "<group>"; };
+		BE34D8E81E4AA23500DB3714 /* rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rational.swift; sourceTree = "<group>"; };
 		BE4A05DF1E1FFA2600D66ECC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = "recipeManager-iOS/AccountViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "recipeManager-iOS/LoginViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 				B1FF6CE320C26A3B88553402 /* Pods_recipeManager_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE34D8E71E4AA21800DB3714 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				BE34D8E81E4AA23500DB3714 /* rational.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 		BE4A05E71E20431700D66ECC /* Recipes */ = {
@@ -247,6 +257,7 @@
 				BE4A05ED1E20446300D66ECC /* Models */,
 				BE6FE6381E299391000A52F6 /* Views */,
 				BE8DAD731E1FDA4B0017B77B /* Controllers */,
+				BE34D8E71E4AA21800DB3714 /* Library */,
 				BEB6C2561E1C873900AEDC64 /* AppDelegate.swift */,
 				BEB6C2601E1C873900AEDC64 /* Assets.xcassets */,
 				BEB6C2651E1C873900AEDC64 /* Info.plist */,
@@ -401,6 +412,7 @@
 				BE8DAD701E1F061B0017B77B /* RecipeManagerConnection.swift in Sources */,
 				BE4A05F91E2147BB00D66ECC /* UserAuthenticationProtocol.swift in Sources */,
 				BE6FE63D1E2A5B49000A52F6 /* IngredientRow.swift in Sources */,
+				BE34D8E91E4AA23500DB3714 /* rational.swift in Sources */,
 				BE4A05FF1E2156BB00D66ECC /* Connections.swift in Sources */,
 				BE4A06051E23250000D66ECC /* EditRecipeViewController.swift in Sources */,
 				BE4A05FD1E21550100D66ECC /* RecipesViewController.swift in Sources */,

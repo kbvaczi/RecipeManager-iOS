@@ -9,5 +9,7 @@
 import Foundation
 
 struct Connections {
-    static let RMConnection = RecipeManagerConnection("https://recipemanager-api.herokuapp.com")
+    //static let RMConnection = RecipeManagerConnection("https://recipemanager-api.herokuapp.com")
+
+    static let RMConnection = RecipeManagerConnection()
 }

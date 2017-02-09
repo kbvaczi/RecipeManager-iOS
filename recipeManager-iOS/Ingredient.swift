@@ -26,6 +26,11 @@ struct Ingredient: Equatable {
         self.amountUnit = MKUnits.Unit.unitByName(amountUnitName)
     }
 
+    enum formatOption {
+        case long
+        case short
+    }
+
 }
 
 extension Ingredient {
@@ -35,9 +40,10 @@ extension Ingredient {
         return MKUnits.Quantity(amount: amount as NSNumber, unit: amountUnit)
     }
 
-    func displayQuantity() -> String {
+    func displayQuantity(format: formatOption = .short) -> String {
         let pluralPostfix = amount > 1 ? "s" : ""
-        return "\(amount) \(amountUnit.name)\(pluralPostfix)"
+        let amountString = Rational(amount).stringValue
+        return "\(amountString) \(format == .short ? amountUnit.symbol : amountUnit.name)\(pluralPostfix)"
     }
 
     /* Ingredient must conform to Equatable protocol to be used as a type for Eureka forms */

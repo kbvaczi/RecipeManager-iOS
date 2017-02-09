@@ -16,7 +16,7 @@ final class IngredientCell: Cell<Ingredient>, CellType {
     override func update() {
         super.update()
         guard let ingredient = row.value else { return }
-        let labelText = "\(ingredient.amount) \(ingredient.amountUnit.name) \(ingredient.description)"
+        let labelText = "\(ingredient.displayQuantity(format: .long)) \(ingredient.description)"
         label?.text = labelText
     }
 }
