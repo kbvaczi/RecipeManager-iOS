@@ -12,7 +12,7 @@
 		BE34D8E21E460C5800DB3714 /* DirectionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34D8E11E460C5800DB3714 /* DirectionFormViewController.swift */; };
 		BE34D8E41E4612A200DB3714 /* DirectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE34D8E31E4612A200DB3714 /* DirectionCell.xib */; };
 		BE34D8E61E475E1300DB3714 /* FormDeletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34D8E51E475E1300DB3714 /* FormDeletable.swift */; };
-		BE34D8E91E4AA23500DB3714 /* rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34D8E81E4AA23500DB3714 /* rational.swift */; };
+		BE34D8E91E4AA23500DB3714 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE34D8E81E4AA23500DB3714 /* Rational.swift */; };
 		BE4A05E01E1FFA2600D66ECC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05DF1E1FFA2600D66ECC /* AccountViewController.swift */; };
 		BE4A05E21E1FFA3C00D66ECC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */; };
 		BE4A05E41E20370C00D66ECC /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */; };
@@ -40,6 +40,7 @@
 		BEB6C25F1E1C873900AEDC64 /* recipeManager_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEB6C25D1E1C873900AEDC64 /* recipeManager_iOS.xcdatamodeld */; };
 		BEB6C2611E1C873900AEDC64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB6C2601E1C873900AEDC64 /* Assets.xcassets */; };
 		BEB6C2641E1C873900AEDC64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB6C2621E1C873900AEDC64 /* LaunchScreen.storyboard */; };
+		BEF9353E1E4F3D510081E9E6 /* AmountPickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9353D1E4F3D510081E9E6 /* AmountPickerRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +51,7 @@
 		BE34D8E11E460C5800DB3714 /* DirectionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionFormViewController.swift; sourceTree = "<group>"; };
 		BE34D8E31E4612A200DB3714 /* DirectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionCell.xib; sourceTree = "<group>"; };
 		BE34D8E51E475E1300DB3714 /* FormDeletable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDeletable.swift; sourceTree = "<group>"; };
-		BE34D8E81E4AA23500DB3714 /* rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rational.swift; sourceTree = "<group>"; };
+		BE34D8E81E4AA23500DB3714 /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
 		BE4A05DF1E1FFA2600D66ECC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = "recipeManager-iOS/AccountViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BE4A05E11E1FFA3C00D66ECC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "recipeManager-iOS/LoginViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BE4A05E31E20370C00D66ECC /* RootTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		BEB6C2601E1C873900AEDC64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEB6C2631E1C873900AEDC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEB6C2651E1C873900AEDC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF9353D1E4F3D510081E9E6 /* AmountPickerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountPickerRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,7 @@
 		BE34D8E71E4AA21800DB3714 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				BE34D8E81E4AA23500DB3714 /* rational.swift */,
+				BE34D8E81E4AA23500DB3714 /* Rational.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 			children = (
 				BE6FE6361E299387000A52F6 /* IngredientCell.xib */,
 				BE6FE63B1E2A5B49000A52F6 /* IngredientRow.swift */,
+				BEF9353D1E4F3D510081E9E6 /* AmountPickerRow.swift */,
 			);
 			name = Ingredients;
 			sourceTree = "<group>";
@@ -412,13 +415,14 @@
 				BE8DAD701E1F061B0017B77B /* RecipeManagerConnection.swift in Sources */,
 				BE4A05F91E2147BB00D66ECC /* UserAuthenticationProtocol.swift in Sources */,
 				BE6FE63D1E2A5B49000A52F6 /* IngredientRow.swift in Sources */,
-				BE34D8E91E4AA23500DB3714 /* rational.swift in Sources */,
+				BE34D8E91E4AA23500DB3714 /* Rational.swift in Sources */,
 				BE4A05FF1E2156BB00D66ECC /* Connections.swift in Sources */,
 				BE4A06051E23250000D66ECC /* EditRecipeViewController.swift in Sources */,
 				BE4A05FD1E21550100D66ECC /* RecipesViewController.swift in Sources */,
 				BE4A05E91E20436300D66ECC /* Recipe.swift in Sources */,
 				BE4A06091E25B1C200D66ECC /* ActivityIndicator.swift in Sources */,
 				BE34D8E61E475E1300DB3714 /* FormDeletable.swift in Sources */,
+				BEF9353E1E4F3D510081E9E6 /* AmountPickerRow.swift in Sources */,
 				BE6FE6491E32B377000A52F6 /* RecipeImageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

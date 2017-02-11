@@ -24,14 +24,14 @@ class IngredientFormViewController: ExpandableListRowFormController<Ingredient> 
         }
 
         let amountSection = Section("Amount")
-            <<< DecimalRow() {
+            <<< AmountPickerInlineRow() {
                 $0.title = "Amount"
-                $0.value = data?.amount != nil ? NSDecimalNumber(decimal:(data?.amount)!).doubleValue : nil
+                $0.value = self.data?.amount
                 $0.onChange() {
-                    self.data?.amount = Decimal(floatLiteral: $0.value ?? 1)
+                    self.data?.amount = $0.value ?? 0
                 }
             }
-            <<< ActionSheetRow<MKUnits.Unit>() {
+            <<< PickerInlineRow<MKUnits.Unit>() {
                 $0.title = "Unit"
                 $0.value = data?.amountUnit
                 $0.options = MKUnits.Unit.availableUnits()

@@ -250,7 +250,7 @@ extension Recipe {
                 let ingredientName: String = ingredientJSON["name"].string ?? ""
                 let ingredientDescription: String? = ingredientJSON["description"].string
                 let ingredientID: UUID? = UUID(uuidString: ingredientJSON["id"].stringValue)
-                let ingredientAmount = Decimal(ingredientJSON["amount"].doubleValue ?? 1.99923)
+                let ingredientAmount = Decimal(ingredientJSON["amount"].doubleValue)
                 let ingredientUnitName = ingredientJSON["amountUnit"].string ?? "count"
                 let ingredient = Ingredient(name: ingredientName,
                                             description: ingredientDescription,

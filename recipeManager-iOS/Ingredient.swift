@@ -31,10 +31,21 @@ struct Ingredient: Equatable {
         case short
     }
 
+    // what fractions can we use in views for selecting amount?
+    static func quantityFractionOptions(withBlank: Bool = false) -> [String] {
+        var fractionOptions = [String]()
+        if withBlank == true {
+            fractionOptions.append("")
+        }
+        fractionOptions.append(contentsOf:
+            ["1/16", "1/8", "1/6", "1/4", "1/3", "1/2", "2/3", "3/4"]
+        )
+        return fractionOptions
+    }
 }
 
 extension Ingredient {
-    
+
     /* Returns an MKUnits.Quanity object for combining ingredients with different units */
     func quantity() -> MKUnits.Quantity {
         return MKUnits.Quantity(amount: amount as NSNumber, unit: amountUnit)
@@ -45,6 +56,8 @@ extension Ingredient {
         let amountString = Rational(amount).stringValue
         return "\(amountString) \(format == .short ? amountUnit.symbol : amountUnit.name)\(pluralPostfix)"
     }
+
+
 
     /* Ingredient must conform to Equatable protocol to be used as a type for Eureka forms */
     static func ==(lhs: Ingredient, rhs: Ingredient) -> Bool {

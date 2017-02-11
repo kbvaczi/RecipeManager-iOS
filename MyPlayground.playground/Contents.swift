@@ -2,8 +2,4 @@
 
 import UIKit
 
-
-var str = "Hello, playground"
-
-3.kilogram()
-
+let d: Decimal = 3.25
