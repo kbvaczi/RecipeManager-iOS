@@ -15,12 +15,13 @@ import MKUnits
 class RecipeManagerConnection {
     
     static let loginFlagKey = "RecipeManagerLoginFlag"
-    static let emailKey = "RecipeManagerUserEmail"
+    static let uidKey = "RecipeManagerUID"
     static let passwordKey = "RecipeManagerUserPassword"
     static let clientKey = "RecipeManagerClientToken"
     static let accessTokenKey = "RecipeManagerAccessToken"
-    
+
     let rootURLString: String
+    let provider = "iOS"
     
     init(_ rootURL: String? = nil) {
 
@@ -69,6 +70,7 @@ extension RecipeManagerConnection {
 
 extension RecipeManagerConnection {
 
+    /*
     func emailRegistrationRequest(email: String, password: String, passwordConfirmation: String, callback: @escaping (_ loginSuccess: Bool) -> Void) {
         
         let emailRegistrationURLString = rootURLString + "/auth"
@@ -89,12 +91,34 @@ extension RecipeManagerConnection {
         }
         
     }
-    
-    func loginRequest(email: String, password: String, callback: @escaping (_ loginSuccess: Bool) -> Void) {
-        
+    */
+
+    func registrationRequest(uid: String, password: String, passwordConfirmation: String, callback: @escaping (_ loginSuccess: Bool) -> Void) {
+        let registrationURLString = rootURLString + "/auth"
+        let registrationParameters: [String: Any] = [
+            // TODO: set uid using apple generated tokens?
+            "uid": uid,
+            "provider": provider,
+            "password": password,
+            "password_confirmation": passwordConfirmation
+        ]
+
+        request(registrationURLString, method: .post, parameters: registrationParameters){ (processedResponseJSON: JSON?, isSuccessful: Bool, statusCode: Int?) -> Void in
+            guard isSuccessful else {
+                print("registration unsuccessful")
+                callback(false)
+                return
+            }
+            print("registration successful")
+            callback(true)
+        }
+
+    }
+
+    func loginRequest(uid: String, password: String, callback: @escaping (_ loginSuccess: Bool) -> Void) {
         let loginURLString = rootURLString + "/auth/sign_in"
         let loginParameters: [String: Any] = [
-            "email": email,
+            "uid": uid,
             "password": password
         ]
         
@@ -104,13 +128,12 @@ extension RecipeManagerConnection {
                 callback(false)
                 return
             }
-            self.setLoginFlag(email: email, password: password)
+            self.setLoginFlag(uid: uid, password: password)
             callback(true)
         }
     }
     
     func logoutRequest(callback: @escaping (_ logoutSuccess: Bool) -> Void) {
-        
         let logoutURLString = rootURLString + "/auth/sign_out"
         
         request(logoutURLString, method: .delete){ (processedResponseJSON: JSON?, isSuccessful: Bool, statusCode: Int?) -> Void in
@@ -127,21 +150,19 @@ extension RecipeManagerConnection {
     
     // TODO: Store email and password in keychain
     
-    var userEmail: String? {
-
+    var userUID: String? {
         get {
-            guard let email = UserDefaults.standard.value(forKey: RecipeManagerConnection.emailKey) as? String else {
+            guard let uid = UserDefaults.standard.value(forKey: RecipeManagerConnection.uidKey) as? String else {
                 return nil
             }
-            return email
+            return uid
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: RecipeManagerConnection.emailKey)
+            UserDefaults.standard.set(newValue, forKey: RecipeManagerConnection.uidKey)
         }
     }
     
     var userPassword: String? {
-
         get {
             guard let email = UserDefaults.standard.value(forKey: RecipeManagerConnection.passwordKey) as? String else {
                 return nil
@@ -154,7 +175,6 @@ extension RecipeManagerConnection {
     }
     
     var userClientToken: String? {
-
         get {
             guard let token = UserDefaults.standard.value(forKey: RecipeManagerConnection.clientKey) as? String else {
                 return nil
@@ -167,7 +187,6 @@ extension RecipeManagerConnection {
     }
     
     var userAccessToken: String? {
-
         get {
             guard let token = UserDefaults.standard.value(forKey: RecipeManagerConnection.accessTokenKey) as? String else {
                 return nil
@@ -180,35 +199,30 @@ extension RecipeManagerConnection {
     }
     
     var userAuthHeaders: [String: String] {
-
         get {
-            return ["uid": userEmail ?? "", "client": userClientToken ?? "", "access-token": userAccessToken ?? ""]
+            return ["uid": userUID ?? "", "client": userClientToken ?? "", "access-token": userAccessToken ?? ""]
         }
     }
     
     func updateUserAuthHeaders(responseHeaders: [String: String]?) {
-
         guard let responseHeaders = responseHeaders else { return }
         if (responseHeaders["client"] != nil) { userClientToken = responseHeaders["client"] }
         if (responseHeaders["access-token"] != nil) { userAccessToken = responseHeaders["access-token"] }
     }
     
-    func setLoginFlag(email: String, password: String) {
-
+    func setLoginFlag(uid: String, password: String) {
         UserDefaults.standard.set(true, forKey: RecipeManagerConnection.loginFlagKey)
-        userEmail = email
+        userUID = uid
         userPassword = password
     }
     
     func clearLoginFlag() {
-
         UserDefaults.standard.set(false, forKey: RecipeManagerConnection.loginFlagKey)
-        userEmail = nil
+        userUID = nil
         userPassword = nil
     }
     
     var isUserLoggedIn: Bool {
-
         get {
             guard let loginFlag = UserDefaults.standard.value(forKey: RecipeManagerConnection.loginFlagKey) as? Bool else {
                 return false

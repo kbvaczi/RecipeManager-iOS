@@ -22,7 +22,7 @@ class AccountViewController: UIViewController, UserAuthenticationRequired {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        accountLabel.text = Connections.RMConnection.userEmail
+        accountLabel.text = Connections.RMConnection.userUID
     }
     
 }

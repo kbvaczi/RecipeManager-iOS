@@ -31,12 +31,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: UIButton) {
-        guard   let userEmail = emailTextField.text,
+        guard   let userUID = emailTextField.text,
                 let userPassword = passwordTextField.text,
                 let userPasswordConfirmation = passwordConfirmationTextField.text else {
                 return
         }
-        Connections.RMConnection.emailRegistrationRequest(email: userEmail, password: userPassword, passwordConfirmation: userPasswordConfirmation) { (signupSuccess: Bool) -> Void in
+        Connections.RMConnection.registrationRequest(uid: userUID, password: userPassword, passwordConfirmation: userPasswordConfirmation) { (signupSuccess: Bool) -> Void in
             if signupSuccess {
                 self.switchToLoginView()
                 let alert = UIAlertController(title: "Welcome!", message: "Please confirm your account using instructions emailed to the address provided.", preferredStyle: UIAlertControllerStyle.alert)
@@ -53,11 +53,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
-        guard   let userEmail = emailTextField.text,
+        guard   let userUID = emailTextField.text,
                 let userPassword = passwordTextField.text else {
                 return
         }
-        Connections.RMConnection.loginRequest(email: userEmail, password: userPassword) { (loginSuccess: Bool) -> Void in
+        Connections.RMConnection.loginRequest(uid: userUID, password: userPassword) { (loginSuccess: Bool) -> Void in
             if loginSuccess {
                 print("login successful")
                 self.dismiss(animated: true, completion: nil)
